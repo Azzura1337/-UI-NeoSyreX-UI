@@ -1,0 +1,102 @@
+{
+ "WatermarkPanel@lib.pl": {
+  "$你好快呀。|default": "$NeoSyreX-Watermark:Speed",
+  "$DALPHACK|default": "$NeoSyreX-Watermark:Alpha",
+  "$付点哟。|default": "$NeoSyreX-Watermark:ScaleFactor",
+  "$妲己纪|default": "$NeoSyreX-Watermark:Size",
+  "$ClientN|default": "$NeoSyreX_User_Client_Name",
+  "$DICK|default": "$NeoSyreX_Client_Dev_Name",
+  "ignored": "(not $NeoSyreX_Watermark_Ignored)",
+  "controls": [
+   {
+    "1@NeoSyreX-Modules|Watermark.BIGDICK": {}
+   }
+  ]
+ },
+ "BIGDICK@lib.pl": {
+  "size": [
+   "100.0%",
+   "100.0%"
+  ],
+  "offset": "@NeoSyreX-Animations|Lib.轻点好疼呜呜呜。😭",
+  "controls": [
+   {
+    "DICK@DICK": {}
+   }
+  ]
+ },
+ "DICK@lib.pl": {
+  "size": [
+   "100y + 0px",
+   "100.0px"
+  ],
+  "controls": [
+   {
+    "加大力度。加大加大。😆@NeoSyreX-Modules|Watermark.控制你们嘿嘿嘿。🥴": {}
+   }
+  ]
+ },
+ "控制你们嘿嘿嘿。🥴@lib.sp_v": {
+  "anchor_from": "center",
+  "anchor_to": "center",
+  "size": [
+   "100.0%x",
+   "100.0%c"
+  ],
+  "controls": [
+   {
+    "不可以哟。@NeoSyreX-Modules|Watermark.达咩哒咩": {}
+   },
+   {
+    "小猫猫@NeoSyreX-Modules|Watermark.喵喵喵": {}
+   }
+  ]
+ },
+ "达咩哒咩@lib.pl": {
+  "size": [
+   "100.0%y",
+   "100.0%c"
+  ],
+  "controls": [
+   {
+    "达咩哒咩@lib.lb": {
+     "size": [
+      "default",
+      "default"
+     ],
+     "alpha": "$DALPHACK",
+     "anchor_from": "center",
+     "anchor_to": "center",
+     "font_type": "OldSmoothFont",
+     "font_scale_factor": "$付点哟。",
+     "font_size": "$妲己纪",
+     "text": "$ClientN"
+    }
+   }
+  ]
+ },
+ "喵喵喵@lib.pl": {
+  "size": [
+   "100.0%y",
+   "100.0%c"
+  ],
+  "controls": [
+   {
+    "喵喵喵@lib.lb": {
+     "size": [
+      "default",
+      "default"
+     ],
+     "anchor_from": "center",
+     "anchor_to": "center",
+     "alpha": "$DALPHACK",
+     "font_type": "OldSmoothFont",
+     "font_scale_factor": "$付点哟。",
+     "font_size": "$妲己纪",
+     "text": "$DICK"
+    }
+   }
+  ]
+ },
+ "namespace": "NeoSyreX-Modules|Watermark"
+}

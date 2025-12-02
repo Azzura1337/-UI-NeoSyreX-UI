@@ -1,0 +1,486 @@
+{
+ "Chat_Label_Panel@lib.lb": {
+  "layer": 38,
+  "text": "#text",
+  "size": [
+   "100%",
+   "default"
+  ],
+  "anims": [
+   "@NeoSyreX-Animations|Hud.Chat_Label_Alpha_Entrance"
+  ],
+  "shadow": true,
+  "localize": true,
+  "font_type": "$NeoSyreX_Global_FontType",
+  "color": "$NeoSyreX_Global_Z_Font_Color",
+  "bindings": [
+   {
+    "binding_name": "#chat_text",
+    "binding_name_override": "#text",
+    "binding_type": "collection",
+    "binding_collection_name": "chat_text_grid",
+    "binding_condition": "once"
+   }
+  ]
+ },
+ "Chat_Grid_Item@lib.pl": {
+  "layer": 1,
+  "size": [
+   "100%",
+   "100%c"
+  ],
+  "clips_children": true,
+  "anchor_from": "top_left",
+  "anchor_to": "top_left",
+  "anims": [
+   "@NeoSyreX-Animations|Hud.Chat_Grid_Item_Size_Entrance"
+  ],
+  "controls": [
+   {
+    "Chat_Text_Panel@lib.pl": {
+     "size": [
+      "100%",
+      "100%c"
+     ],
+     "controls": [
+      {
+       "ChatText@NeoSyreX-Screen|Hud.Chat_Label_Panel": {
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "offset": [
+         2,
+         0
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "ChatPanelMain@lib.pl": {
+  "anchor_from": "center",
+  "anchor_to": "center",
+  "size": [
+   220.0,
+   "100%c"
+  ],
+  "max_size": [
+   220.0,
+   170
+  ],
+  "clips_children": true,
+  "controls": [
+   {
+    "Chat_Background@lib.pl": {
+     "size": [
+      "100%",
+      "100%c"
+     ],
+     "clips_children": true,
+     "controls": [
+      {
+       "stack_panel@lib.sp_v": {
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "factory": {
+         "name": "chat_item_factory",
+         "max_children_size": 50,
+         "control_ids": {
+          "chat_item": "chat_item@NeoSyreX-Screen|Hud.Chat_Grid_Item"
+         }
+        }
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "Chat_Panel@lib.pl": {
+  "size": [
+   300,
+   "100%cm"
+  ],
+  "anchor_from": "bottom_left",
+  "anchor_to": "bottom_left",
+  "offset": [
+   -25,
+   -10
+  ],
+  "clips_children": true,
+  "bindings": [
+   {
+    "binding_name": "(not #on_new_death_screen)",
+    "binding_name_override": "#visible"
+   }
+  ],
+  "controls": [
+   {
+    "Chat_Panel_Aligner@lib.pl": {
+     "size": [
+      "100%cm",
+      "100%c"
+     ],
+     "controls": [
+      {
+       "Chat_Panel_Control@lib.pl": {
+        "size": [
+         "100%cm",
+         "100%cm"
+        ],
+        "controls": [
+         {
+          "Chat_Panel_Bottom_Bg_Panel@lib.pl": {
+           "layer": -5,
+           "size": [
+            "100%sm + 0.0px + 0.000000000000000000000000px",
+            "100%sm + 0.0px + 0.000000000000000000000000px"
+           ],
+           "controls": [
+            {
+             "Border@lib.im": {
+              "size": [
+               "100%",
+               "100%"
+              ],
+              "layer": 91,
+              "color": "$NeoSyreX_Basic_Border_Texture_Top_Color",
+              "texture": "$Border15"
+             }
+            },
+            {
+             "Chat_Panel_Bottom_Background@lib.im": {
+              "size": [
+               "100%",
+               "100%"
+              ],
+              "color": "$NeoSyreX_Basic_Border_Texture_Middle_Color",
+              "alpha": "$NeoSyreX_Basic_Border_Texture_Middle_Alpha",
+              "texture": "$Fillet15",
+              "layer": -4
+             }
+            }
+           ]
+          }
+         },
+         {
+          "main@NeoSyreX-Screen|Hud.ChatPanelMain": {}
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "HotbarContent@lib.im": {
+  "size": [
+   "180.0px",
+   "22.0px"
+  ],
+  "offset": "$offset",
+  "$offset": [
+   0.0,
+   -4.0
+  ],
+  "anims": [
+   "@NeoSyreX-Animations|Hud.Hotbar_Anim_Offset_In",
+   "@NeoSyreX-Animations|Hud.Hotbar_Anim_Offset_Out"
+  ],
+  "animation_reset_name": "screen_animation_reset",
+  "alpha": "$NeoSyreX_Basic_Border_Texture_Middle_Alpha",
+  "color": "$NeoSyreX_Basic_Border_Texture_Middle_Color",
+  "texture": ".NeoSyreX/Textures/Icon/Hud/Hotbar_Bg",
+  "anchor_from": "bottom_middle",
+  "anchor_to": "bottom_middle",
+  "controls": [
+   {
+    "RendererPanel@NeoSyreX-Common|Hud.RendererPanel": {}
+   },
+   {
+    "ExpPanel@NeoSyreX-Screen|Hud.ExpPanel": {
+     "bindings": [
+      {
+       "binding_name": "#hotbar_with_xp_bar",
+       "binding_name_override": "#visible"
+      }
+     ]
+    }
+   },
+   {
+    "PlayerDollContent@NeoSyreX-Modules|PlayerDoll.PlayerDollContent": {
+     "offset": [
+      -46.0,
+      -22.0
+     ]
+    }
+   },
+   {
+    "Elipses@NeoSyreX-Common|Hud.HotbarElipsesInputPanel": {}
+   },
+   {
+    "Bloom@lib.im": {
+     "texture": "$XSShadow",
+     "alpha": "$NeoSyreX_Basic_Shadow_Texture_Alpha",
+     "color": "$NeoSyreX_Basic_Shadow_Texture_Color",
+     "ignored": "(not $NeoSyreX_Textures_Shadow)",
+     "layer": -2,
+     "size": [
+      "100% + 49.0px",
+      "100% + 47.89px"
+     ]
+    }
+   },
+   {
+    "Border@lib.im": {
+     "size": [
+      "100.0%",
+      "100.0%"
+     ],
+     "layer": 3,
+     "color": "$NeoSyreX_Basic_Border_Texture_Top_Color",
+     "texture": ".NeoSyreX/Textures/Icon/Hud/Hotbar_Bg_Border"
+    }
+   },
+   {
+    "HotbarInputPanel@lib.ip": {
+     "size": [
+      "100.0%",
+      "100.0%"
+     ],
+     "prevent_touch_input": true,
+     "controls": [
+      {
+       "hotbar_grid@NeoSyreX-Screen|Hud.HotbarGridTemplate": {
+        "layer": 10
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "HotbarGridTemplate@lib.g": {
+  "$hotbar_collection_name|default": "hotbar_items",
+  "grid_item_template": "NeoSyreX-Common|Hud.GuiHotbarGridItem",
+  "grid_dimension_binding": "#hotbar_grid_dimensions",
+  "collection_name": "$hotbar_collection_name",
+  "bindings": [
+   {
+    "binding_name": "#hotbar_grid_dimensions",
+    "binding_type": "global"
+   }
+  ]
+ },
+ "ExpPanel@lib.im": {
+  "color": "$NeoSyreX_Theme_Hud_Empty_Exp_Progress_Color",
+  "alpha": "$NeoSyreX_Theme_Hud_Empty_Exp_Progress_Alpha",
+  "texture": ".NeoSyreX/Textures/Icon/Hud/Exp_Progress",
+  "size": [
+   180,
+   5
+  ],
+  "offset": [
+   0,
+   -6.75461584676
+  ],
+  "anchor_from": "top_middle",
+  "anchor_to": "top_middle",
+  "controls": [
+   {
+    "Full@lib.im": {
+     "color": "$NeoSyreX_Theme_Hud_Full_Exp_Progress_Color",
+     "alpha": "$NeoSyreX_Theme_Hud_Full_Exp_Progress_Alpha",
+     "texture": ".NeoSyreX/Textures/Icon/Hud/Exp_Progress",
+     "size": [
+      180,
+      5
+     ],
+     "clip_direction": "left",
+     "clip_pixelperfect": false,
+     "bindings": [
+      {
+       "binding_name": "#exp_progress",
+       "binding_name_override": "#clip_ratio",
+       "binding_type": "global"
+      }
+     ]
+    }
+   },
+   {
+    "Level@lib.lb": {
+     "layer": 1,
+     "offset": [
+      0,
+      -1.55
+     ],
+     "color": "green",
+     "font_scale_factor": 0.78,
+     "text": "#Level",
+     "shadow": "$NeoSyreX_Global_Font_Shadow",
+     "font_type": "$NeoSyreX_Global_FontType",
+     "bindings": [
+      {
+       "binding_name": "#level_number",
+       "binding_name_override": "#text",
+       "binding_type": "global"
+      },
+      {
+       "binding_type": "view",
+       "source_property_name": "('Level: ' + #text)",
+       "target_property_name": "#Level"
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "WatermarkHud_Content@lib.pl": {
+  "size": [
+   "166.0px + 49.0px",
+   "16.0px + 49.0px"
+  ],
+  "anchor_to": "top_left",
+  "anchor_from": "top_left",
+  "controls": [
+   {
+    "WatermarkHud@lib.im": {
+     "size": [
+      "166.0px",
+      "16.0px"
+     ],
+     "color": "$NeoSyreX_Basic_Border_Texture_Middle_Color",
+     "alpha": "$NeoSyreX_Basic_Border_Texture_Middle_Alpha",
+     "texture": "$texture",
+     "variables": [
+      {
+       "requires": "($NeoSyreX_Fillet_Texture_Degree = 10)",
+       "$texture|default": "$Fillet10"
+      },
+      {
+       "requires": "($NeoSyreX_Fillet_Texture_Degree = 15)",
+       "$texture|default": "$Fillet15"
+      },
+      {
+       "requires": "($NeoSyreX_Fillet_Texture_Degree = 20)",
+       "$texture|default": "$Fillet20"
+      }
+     ],
+     "controls": [
+      {
+       "TextPanel@lib.sp_h": {
+        "size": [
+         "90.0%",
+         "100.0%"
+        ],
+        "offset": [
+         "0%",
+         0
+        ],
+        "anchor_to": "left_middle",
+        "anchor_from": "left_middle",
+        "controls": [
+         {
+          "1@lib.im": {
+           "texture": "$Fillet15",
+           "color": "$NeoSyreX_Basic_Border_Texture_Top_Color",
+           "layer": 3,
+           "size": [
+            "100%c + 6px",
+            "100%"
+           ],
+           "controls": [
+            {
+             "Text@lib.lb": {
+              "text": "$NeoSyreX_User_Client_Name",
+              "shadow": "$NeoSyreX_Global_Font_Shadow",
+              "font_type": "$NeoSyreX_Global_FontType",
+              "color": "$NeoSyreX_Global_F_Font_Color"
+             }
+            }
+           ]
+          }
+         },
+         {
+          "Padding1@lib.pl": {
+           "size": [
+            "2.01px",
+            0.0
+           ]
+          }
+         },
+         {
+          "UserName@NeoSyreX-Common|Hud.UserNameGridPanel": {}
+         }
+        ]
+       }
+      },
+      {
+       "Bloom@lib.im": {
+        "texture": "$XSShadow",
+        "alpha": "$NeoSyreX_Basic_Shadow_Texture_Alpha",
+        "color": "$NeoSyreX_Basic_Shadow_Texture_Color",
+        "ignored": "(not $NeoSyreX_Textures_Shadow)",
+        "layer": 3,
+        "size": [
+         "100% + 49.0px",
+         "100% + 49.0px"
+        ]
+       }
+      },
+      {
+       "Border@lib.im": {
+        "color": "$NeoSyreX_Basic_Border_Texture_Top_Color",
+        "texture": "$texture",
+        "variables": [
+         {
+          "requires": "($NeoSyreX_Fillet_Texture_Degree = 10)",
+          "$texture|default": "$Border10"
+         },
+         {
+          "requires": "($NeoSyreX_Fillet_Texture_Degree = 15)",
+          "$texture|default": "$Border15"
+         },
+         {
+          "requires": "($NeoSyreX_Fillet_Texture_Degree = 20)",
+          "$texture|default": "$Border20"
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "NeoSyreX-Root_Panel@lib.pl": {
+  "size": [
+   "100.0%",
+   "100.0%"
+  ],
+  "$Chat_Wait_Duration|default": "$NeoSyreX_Hud_Chat_Wait_Duration",
+  "controls": [
+   {
+    "HotbarContent@NeoSyreX-Screen|Hud.HotbarContent": {}
+   },
+   {
+    "Vanilla_Root_Panel@NeoSyreX-Common|Hud.Vanilla_Root_Panel": {}
+   },
+   {
+    "Chat_Panel@NeoSyreX-Screen|Hud.Chat_Panel": {}
+   },
+   {
+    "DynamicIslandContent@NeoSyreX-Modules|DynamicIsland.DynamicIslandContent": {}
+   },
+   {
+    "ScoreBoardContent@NeoSyreX-Modules|ScoreBoard.ScoreBoardSideBar": {}
+   },
+   {
+    "Wtaermark@NeoSyreX-Common|Hud.WatermarkOrInventoryContent": {}
+   }
+  ]
+ },
+ "namespace": "NeoSyreX-Screen|Hud"
+}

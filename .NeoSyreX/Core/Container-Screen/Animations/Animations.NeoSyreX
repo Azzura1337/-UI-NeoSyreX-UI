@@ -1,0 +1,111 @@
+{
+ "namespace": "NeoSyreX-Animations|Container",
+ "Container_Background_Offset_Enter": {
+  "anim_type": "offset",
+  "duration": 0.321973,
+  "easing": "out_circ",
+  "from": [
+   0.0,
+   "-200%"
+  ],
+  "to": "$ToOffset",
+  "play_event": "screen.entrance_push"
+ },
+ "Container_Background_Offset_Exit": {
+  "anim_type": "offset",
+  "duration": 0.321973,
+  "easing": "in_circ",
+  "from": "$ToOffset",
+  "to": [
+   0.0,
+   "-200%"
+  ],
+  "play_event": "screen.exit_pop"
+ },
+ "Container_Recipe_Anim_Offset_Enter": {
+  "anim_type": "offset",
+  "duration": 0.321973,
+  "easing": "out_circ",
+  "from": [
+   "200.0%",
+   0.0
+  ],
+  "to": [
+   0.0,
+   0.0
+  ],
+  "play_event": "screen.entrance_push"
+ },
+ "Container_Recipe_Anim_Offset_Exit": {
+  "anim_type": "offset",
+  "duration": 0.321973,
+  "easing": "in_circ",
+  "from": [
+   0.0,
+   0.0
+  ],
+  "to": [
+   "200.0%",
+   0.0
+  ],
+  "play_event": "screen.exit_pop"
+ },
+ "Container_Anim_Size_Enter": {
+  "anim_type": "size",
+  "from": [
+   0.0,
+   0.0
+  ],
+  "to": "$size",
+  "easing": "out_circ",
+  "duration": "$NeoSyreX_Container_Animations_Duration",
+  "play_event": "screen.entrance_push"
+ },
+ "Container_Anim_Size_Exit": {
+  "anim_type": "size",
+  "to": [
+   0.0,
+   0.0
+  ],
+  "from": "$size",
+  "easing": "in_circ",
+  "duration": "$NeoSyreX_Container_Animations_Duration",
+  "play_event": "screen.exit_pop"
+ },
+ "Container_Anim_Alpha_Exit_Push": {
+  "anim_type": "alpha",
+  "easing": "out_cubic",
+  "duration": "$transition_time_push",
+  "from": 1.0,
+  "to": 0.0,
+  "play_event": "screen.exit_push",
+  "end_event": "screen.exit_end"
+ },
+ "Container_Anim_Alpha_Exit_Pop": {
+  "anim_type": "alpha",
+  "easing": "out_cubic",
+  "duration": "$transition_time_pop",
+  "from": 1.0,
+  "to": 0.0,
+  "play_event": "screen.exit_pop",
+  "end_event": "screen.exit_end"
+ },
+ "Container_Anim_Alpha_Enter_Push": {
+  "anim_type": "alpha",
+  "easing": "out_cubic",
+  "duration": "$transition_time_push",
+  "from": 0.0,
+  "to": 1.0,
+  "play_event": "screen.entrance_push",
+  "end_event": "screen.entrance_end"
+ },
+ "Container_Anim_Alpha_Enter_Pop": {
+  "anim_type": "alpha",
+  "easing": "out_cubic",
+  "duration": "$transition_time_pop",
+  "from": 0.0,
+  "to": 1.0,
+  "play_event": "screen.entrance_pop",
+  "end_event": "screen.entrance_end"
+ }
+}

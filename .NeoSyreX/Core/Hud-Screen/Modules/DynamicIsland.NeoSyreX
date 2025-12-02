@@ -1,0 +1,186 @@
+{
+ "namespace": "NeoSyreX-Modules|DynamicIsland",
+ "DynamicIslandContent@lib.pl": {
+  "size": [
+   "100.0%cm",
+   "100.0%cm"
+  ],
+  "offset": "$offset",
+  "$offset": [
+   0.0,
+   0.0
+  ],
+  "anchor_from": "top_middle",
+  "anchor_to": "top_middle",
+  "layer": 4,
+  "anims": [
+   "@NeoSyreX-Animations|Hud.DynamicIsland_Anim_Offset_In",
+   "@NeoSyreX-Animations|Hud.DynamicIsland_Anim_Offset_Out"
+  ],
+  "animation_reset_name": "screen_animation_reset",
+  "clips_children": true,
+  "controls": [
+   {
+    "DynamicIsland_aligner@lib.sp_v": {
+     "size": [
+      "100%cm",
+      "100%c"
+     ],
+     "controls": [
+      {
+       "DynamicIsland_control@lib.pl": {
+        "size": [
+         "100%cm",
+         "100%cm"
+        ],
+        "clips_children": true,
+        "controls": [
+         {
+          "Bg@lib.im": {
+           "size": [
+            "100%sm + 12px",
+            "100%sm + 5.8px"
+           ],
+           "color": "$NeoSyreX_Basic_Border_Texture_Middle_Color",
+           "alpha": "$NeoSyreX_Basic_Border_Texture_Middle_Alpha",
+           "texture": "$texture",
+           "variables": [
+            {
+             "requires": "($NeoSyreX_Fillet_Texture_Degree = 10)",
+             "$texture|default": "$Fillet10"
+            },
+            {
+             "requires": "($NeoSyreX_Fillet_Texture_Degree = 15)",
+             "$texture|default": "$Fillet15"
+            },
+            {
+             "requires": "($NeoSyreX_Fillet_Texture_Degree = 20)",
+             "$texture|default": "$Fillet20"
+            }
+           ],
+           "layer": -1
+          }
+         },
+         {
+          "Border@lib.im": {
+           "size": [
+            "100%sm + 12px",
+            "100%sm + 5.8px"
+           ],
+           "layer": 2,
+           "color": "$NeoSyreX_Basic_Border_Texture_Top_Color",
+           "texture": "$texture",
+           "variables": [
+            {
+             "requires": "($NeoSyreX_Fillet_Texture_Degree = 10)",
+             "$texture|default": "$Border10"
+            },
+            {
+             "requires": "($NeoSyreX_Fillet_Texture_Degree = 15)",
+             "$texture|default": "$Border15"
+            },
+            {
+             "requires": "($NeoSyreX_Fillet_Texture_Degree = 20)",
+             "$texture|default": "$Border20"
+            }
+           ]
+          }
+         },
+         {
+          "Bloom@lib.im": {
+           "texture": "$XSShadow",
+           "layer": -2,
+           "alpha": "$NeoSyreX_Basic_Shadow_Texture_Alpha",
+           "color": "$NeoSyreX_Basic_Shadow_Texture_Color",
+           "offset": [
+            0.0,
+            -0.5
+           ],
+           "ignored": "(not $NeoSyreX_Textures_Shadow)",
+           "size": [
+            "100%sm + 60px + 0.000000000000000000000000px",
+            "100%sm + 55px + 0.000000000000000000000000px"
+           ]
+          }
+         },
+         {
+          "position@lib.sp_h": {
+           "size": [
+            "default",
+            10
+           ],
+           "offset": [
+            0.0,
+            27.25
+           ],
+           "layer": 5,
+           "anchor_from": "top_middle",
+           "anchor_to": "top_middle",
+           "controls": [
+            {
+             "player_position_text@lib.lb": {
+              "layer": 5,
+              "color": "$chat_text_color",
+              "text": "#text",
+              "shadow": "$NeoSyreX_Global_Font_Shadow",
+              "alpha": 1.0,
+              "size": [
+               "default",
+               "default"
+              ],
+              "font_type": "$NeoSyreX_Global_FontType",
+              "bindings": [
+               {
+                "binding_name": "#player_position_visible",
+                "binding_name_override": "#visible",
+                "binding_condition": "always",
+                "binding_type": "global"
+               },
+               {
+                "binding_name": "#player_position_text",
+                "binding_name_override": "#position",
+                "binding_condition": "always_when_visible",
+                "binding_type": "global"
+               },
+               {
+                "binding_type": "view",
+                "source_property_name": "($NeoSyreX_Name + ' · ' + #position)",
+                "target_property_name": "#text"
+               }
+              ]
+             }
+            },
+            {
+             "text@lib.lb": {
+              "layer": 5,
+              "color": "$chat_text_color",
+              "shadow": "$NeoSyreX_Global_Font_Shadow",
+              "text": "($NeoSyreX_Name + ' ·  ' + $NeoSyreX_Client_Dev_Name)",
+              "alpha": 1.0,
+              "size": [
+               "default",
+               "default"
+              ],
+              "font_type": "$NeoSyreX_Global_FontType",
+              "bindings": [
+               {
+                "binding_name": "(not #player_position_visible)",
+                "binding_name_override": "#visible",
+                "binding_condition": "always",
+                "binding_type": "global"
+               }
+              ]
+             }
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

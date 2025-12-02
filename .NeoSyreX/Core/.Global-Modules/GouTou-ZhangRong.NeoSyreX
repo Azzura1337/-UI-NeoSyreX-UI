@@ -1,0 +1,20 @@
+{
+ "namespace": "NeoSyreX-Modules|ZhangRong",
+ "ZhangRongContent@lib.Zr": {
+  "type": "panel",
+  "controls": [
+   {
+    "Zr": {
+     "type": "image",
+     "size": [
+      300,
+      300
+     ],
+     "ignored": "$ZhangRong",
+     "$ZhangRong|default": false,
+     "texture": ".NeoSyreX/Textures/Icon/Debug/ZhangRongGouTou"
+    }
+   }
+  ]
+ }
+}

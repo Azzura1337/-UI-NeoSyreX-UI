@@ -1,0 +1,104 @@
+{
+ "namespace": "NeoSyreX-Modules|PlayerDoll",
+ "PlayerDollContent@lib.pl": {
+  "size": [
+   "100.0%c",
+   "100.0%c"
+  ],
+  "anchor_from": "left_middle",
+  "anchor_to": "left_middle",
+  "controls": [
+   {
+    "PlayerDoll@NeoSyreX-Modules|PlayerDoll.PlayerDoll": {}
+   }
+  ]
+ },
+ "PlayerDoll@lib.im": {
+  "size": [
+   40,
+   65.0
+  ],
+  "color": "$NeoSyreX_Basic_Border_Texture_Middle_Color",
+  "alpha": "$NeoSyreX_Basic_Border_Texture_Middle_Alpha",
+  "texture": "$texture",
+  "variables": [
+   {
+    "requires": "($NeoSyreX_Fillet_Texture_Degree = 10)",
+    "$texture|default": "$Fillet10"
+   },
+   {
+    "requires": "($NeoSyreX_Fillet_Texture_Degree = 15)",
+    "$texture|default": "$Fillet15"
+   },
+   {
+    "requires": "($NeoSyreX_Fillet_Texture_Degree = 20)",
+    "$texture|default": "$Fillet20"
+   }
+  ],
+  "layer": -1,
+  "controls": [
+   {
+    "Border@lib.im": {
+     "size": [
+      "100%",
+      "100%"
+     ],
+     "layer": 2,
+     "color": "$NeoSyreX_Basic_Border_Texture_Top_Color",
+     "texture": "$texture",
+     "variables": [
+      {
+       "requires": "($NeoSyreX_Fillet_Texture_Degree = 10)",
+       "$texture|default": "$Border10"
+      },
+      {
+       "requires": "($NeoSyreX_Fillet_Texture_Degree = 15)",
+       "$texture|default": "$Border15"
+      },
+      {
+       "requires": "($NeoSyreX_Fillet_Texture_Degree = 20)",
+       "$texture|default": "$Border20"
+      }
+     ]
+    }
+   },
+   {
+    "Bloom@lib.im": {
+     "texture": "$XSShadow",
+     "layer": -2,
+     "alpha": "$NeoSyreX_Basic_Shadow_Texture_Alpha",
+     "color": "$NeoSyreX_Basic_Shadow_Texture_Color",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "ignored": "(not $NeoSyreX_Textures_Shadow)",
+     "size": [
+      "100% + 49px + 0.000000000000000000000000px",
+      "100% + 49px + 0.000000000000000000000000px"
+     ]
+    }
+   },
+   {
+    "Renderer@lib.pl": {
+     "size": [
+      26,
+      26
+     ],
+     "offset": [
+      0.0,
+      -12.0
+     ],
+     "controls": [
+      {
+       "Player@lib.cu": {
+        "renderer": "live_player_renderer",
+        "layer": 10
+       }
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

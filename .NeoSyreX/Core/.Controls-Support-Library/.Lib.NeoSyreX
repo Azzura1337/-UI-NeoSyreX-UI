@@ -1,0 +1,38 @@
+{
+ "namespace": "image",
+ "ft@lib.im": {
+  "texture": "$texture",
+  "variables": [
+   {
+    "requires": "($NeoSyreX_Fillet_Texture_Degree = 10)",
+    "$texture|default": "$Fillet10"
+   },
+   {
+    "requires": "($NeoSyreX_Fillet_Texture_Degree = 15)",
+    "$texture|default": "$Fillet15"
+   },
+   {
+    "requires": "($NeoSyreX_Fillet_Texture_Degree = 20)",
+    "$texture|default": "$Fillet20"
+   }
+  ]
+ },
+ "bd@lib.im": {
+  "color": "$NeoSyreX_Basic_Border_Texture_Top_Color",
+  "texture": "$texture",
+  "variables": [
+   {
+    "requires": "($NeoSyreX_Fillet_Texture_Degree = 10)",
+    "$texture|default": "$Border10"
+   },
+   {
+    "requires": "($NeoSyreX_Fillet_Texture_Degree = 15)",
+    "$texture|default": "$Border15"
+   },
+   {
+    "requires": "($NeoSyreX_Fillet_Texture_Degree = 20)",
+    "$texture|default": "$Border20"
+   }
+  ]
+ }
+}

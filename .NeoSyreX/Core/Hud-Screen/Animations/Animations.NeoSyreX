@@ -1,0 +1,239 @@
+{
+ "namespace": "NeoSyreX-Animations|Hud",
+ "Anim_Item_Name_Offset_In": {
+  "anim_type": "size",
+  "duration": 0.33849,
+  "easing": "out_circ",
+  "from": [
+   0.0,
+   "100.0% + 8px"
+  ],
+  "to": [
+   "100.0% + 16px",
+   "100.0% + 8px"
+  ],
+  "next": "@NeoSyreX-Animations|Hud.Anim_Item_Name_Size_Wait"
+ },
+ "Anim_Item_Name_Size_Wait": {
+  "anim_type": "wait",
+  "duration": 4.0,
+  "next": "@NeoSyreX-Animations|Hud.Anim_Item_Name_Size_Out"
+ },
+ "Anim_Item_Name_Size_Out": {
+  "anim_type": "size",
+  "easing": "in_circ",
+  "$destroy_id|default": "",
+  "$end_event|default": "",
+  "destroy_at_end": "$destroy_id",
+  "end_event": "$end_event",
+  "duration": 0.31849,
+  "to": [
+   "100.0%",
+   "100.0% + 8px"
+  ],
+  "from": [
+   "100.0% + 16px",
+   "100.0% + 8px"
+  ]
+ },
+ "Anim_Item_Name_Alpha_In": {
+  "anim_type": "alpha",
+  "duration": 0.33849,
+  "easing": "out_circ",
+  "from": 0.0,
+  "to": 1.0,
+  "next": "@NeoSyreX-Animations|Hud.Anim_Item_Name_Alpha_Wait"
+ },
+ "Anim_Item_Name_Alpha_Wait": {
+  "anim_type": "wait",
+  "duration": 4.0,
+  "next": "@NeoSyreX-Animations|Hud.Anim_Item_Name_Alpha_Out"
+ },
+ "Anim_Item_Name_Alpha_Out": {
+  "anim_type": "alpha",
+  "easing": "in_circ",
+  "$destroy_id|default": "",
+  "$end_event|default": "",
+  "destroy_at_end": "$destroy_id",
+  "end_event": "$end_event",
+  "duration": 0.31849,
+  "to": 0.0,
+  "from": 1.0
+ },
+ "Chat_Grid_Item_Size_Entrance": {
+  "anim_type": "size",
+  "from": [
+   "100%",
+   0
+  ],
+  "to": [
+   "100%",
+   "100%c"
+  ],
+  "easing": "out_circ",
+  "duration": 0.78,
+  "next": "@NeoSyreX-Animations|Hud.Chat_Grid_Item_Size_Wait"
+ },
+ "Chat_Grid_Item_Size_Wait": {
+  "anim_type": "wait",
+  "$Chat_Wait_Duration|default": "",
+  "duration": "$Chat_Wait_Duration",
+  "next": "@NeoSyreX-Animations|Hud.Chat_Grid_Item_Size_Exit"
+ },
+ "Chat_Grid_Item_Size_Exit": {
+  "anim_type": "size",
+  "to": [
+   "100%",
+   0
+  ],
+  "from": [
+   "100%",
+   "100%c"
+  ],
+  "easing": "in_circ",
+  "duration": 0.78,
+  "destroy_at_end": "chat_grid_item"
+ },
+ "Chat_Label_Alpha_Entrance": {
+  "anim_type": "alpha",
+  "from": 0.0,
+  "to": 1.0,
+  "easing": "out_circ",
+  "duration": 0.78,
+  "next": "@NeoSyreX-Animations|Hud.Chat_Label_Alpha_Wait"
+ },
+ "Chat_Label_Alpha_Wait": {
+  "anim_type": "wait",
+  "$Chat_Wait_Duration|default": "",
+  "duration": "$Chat_Wait_Duration",
+  "next": "@NeoSyreX-Animations|Hud.Chat_Label_Alpha_Exit"
+ },
+ "Chat_Label_Alpha_Exit": {
+  "anim_type": "alpha",
+  "to": 0.0,
+  "from": 1.0,
+  "easing": "in_circ",
+  "duration": 0.78,
+  "destroy_at_end": "chat_grid_item"
+ },
+ "DynamicIsland_Anim_Offset_In": {
+  "anim_type": "offset",
+  "from": [
+   0.0,
+   -150.0
+  ],
+  "to": "$offset",
+  "easing": "out_circ",
+  "duration": "$NeoSyreX_Hud_Screen_Animations_Duration",
+  "play_event": "screen.entrance_pop",
+  "reset_event": "screen.entrance_end"
+ },
+ "DynamicIsland_Anim_Offset_Out": {
+  "anim_type": "offset",
+  "from": "$offset",
+  "to": [
+   0.0,
+   -150.0
+  ],
+  "easing": "in_circ",
+  "duration": "$NeoSyreX_Hud_Screen_Animations_Duration",
+  "play_event": "screen.exit_push",
+  "reset_event": "screen.exit_end"
+ },
+ "WatermarkOrInventory_Anim_Offset_In": {
+  "anim_type": "offset",
+  "from": [
+   -150.0,
+   0.0
+  ],
+  "to": "$offset",
+  "easing": "out_circ",
+  "duration": "$NeoSyreX_Hud_Screen_Animations_Duration",
+  "play_event": "screen.entrance_pop",
+  "reset_event": "screen.entrance_end"
+ },
+ "WatermarkOrInventory_Anim_Offset_Out": {
+  "anim_type": "offset",
+  "from": "$offset",
+  "to": [
+   -150.0,
+   0.0
+  ],
+  "easing": "in_circ",
+  "duration": "$NeoSyreX_Hud_Screen_Animations_Duration",
+  "play_event": "screen.exit_push",
+  "reset_event": "screen.exit_end"
+ },
+ "SessionInfo_Anim_Offset_In": {
+  "anim_type": "offset",
+  "from": [
+   150.0,
+   0.0
+  ],
+  "to": "$offset",
+  "easing": "out_circ",
+  "duration": "$NeoSyreX_Hud_Screen_Animations_Duration",
+  "play_event": "screen.entrance_pop",
+  "reset_event": "screen.entrance_end"
+ },
+ "SessionInfo_Anim_Offset_Out": {
+  "anim_type": "offset",
+  "from": "$offset",
+  "to": [
+   150.0,
+   0.0
+  ],
+  "easing": "in_circ",
+  "duration": "$NeoSyreX_Hud_Screen_Animations_Duration",
+  "play_event": "screen.exit_push",
+  "reset_event": "screen.exit_end"
+ },
+ "ScoreBoard_Anim_Offset_In": {
+  "anim_type": "offset",
+  "from": [
+   150.0,
+   0.0
+  ],
+  "to": "$offset",
+  "easing": "out_circ",
+  "duration": "$NeoSyreX_Hud_Screen_Animations_Duration",
+  "play_event": "screen.entrance_pop",
+  "reset_event": "screen.entrance_end"
+ },
+ "ScoreBoard_Anim_Offset_Out": {
+  "anim_type": "offset",
+  "from": "$offset",
+  "to": [
+   150.0,
+   0.0
+  ],
+  "easing": "in_circ",
+  "duration": "$NeoSyreX_Hud_Screen_Animations_Duration",
+  "play_event": "screen.exit_push",
+  "reset_event": "screen.exit_end"
+ },
+ "Hotbar_Anim_Offset_In": {
+  "anim_type": "offset",
+  "from": [
+   0.0,
+   150.0
+  ],
+  "to": "$offset",
+  "easing": "out_circ",
+  "duration": "$NeoSyreX_Hud_Screen_Animations_Duration",
+  "play_event": "screen.entrance_pop",
+  "reset_event": "screen.entrance_end"
+ },
+ "Hotbar_Anim_Offset_Out": {
+  "anim_type": "offset",
+  "from": "$offset",
+  "to": [
+   0.0,
+   150.0
+  ],
+  "easing": "in_circ",
+  "duration": "$NeoSyreX_Hud_Screen_Animations_Duration",
+  "play_event": "screen.exit_push",
+  "reset_event": "screen.exit_end"
+ }
+}

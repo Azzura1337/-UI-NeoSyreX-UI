@@ -1,0 +1,329 @@
+{
+ "namespace": "NeoSyreX-Screen|Chest",
+ "ChestContent@lib.pl": {
+  "size": [
+   "100.0%",
+   "100.0%"
+  ],
+  "controls": [
+   {
+    "container_base@NeoSyreX-Common|Container.ContainerBase": {}
+   },
+   {
+    "ChestPanel@lib.im": {
+     "size": "$size",
+     "$size": [
+      "176.0px",
+      "166.0px"
+     ],
+     "anims": [
+      "@NeoSyreX-Animations|Container.Container_Anim_Size_Exit",
+      "@NeoSyreX-Animations|Container.Container_Anim_Size_Enter"
+     ],
+     "animation_reset_name": "screen_animation_reset",
+     "color": "$NeoSyreX_Basic_Border_Texture_Middle_Color",
+     "alpha": "$NeoSyreX_Basic_Border_Texture_Middle_Alpha",
+     "texture": "$texture",
+     "variables": [
+      {
+       "requires": "($NeoSyreX_Fillet_Texture_Degree = 10)",
+       "$texture|default": "$Fillet10"
+      },
+      {
+       "requires": "($NeoSyreX_Fillet_Texture_Degree = 15)",
+       "$texture|default": "$Fillet15"
+      },
+      {
+       "requires": "($NeoSyreX_Fillet_Texture_Degree = 20)",
+       "$texture|default": "$Fillet20"
+      }
+     ],
+     "controls": [
+      {
+       "TopHalf@lib.pl": {
+        "offset": [
+         0.0,
+         "4.5%"
+        ],
+        "size": [
+         "100.0% - 14.0px",
+         "100.0%"
+        ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "controls": [
+         {
+          "Icon@lib.sp_h": {
+           "size": [
+            12,
+            12
+           ],
+           "anchor_from": "top_left",
+           "anchor_to": "top_left",
+           "offset": [
+            0.0,
+            -4
+           ],
+           "controls": [
+            {
+             "Icon@lib.im": {
+              "size": "$size",
+              "$size": [
+               12,
+               12
+              ],
+              "anims": [
+               "@NeoSyreX-Animations|Container.Container_Anim_Size_Exit",
+               "@NeoSyreX-Animations|Container.Container_Anim_Size_Enter"
+              ],
+              "animation_reset_name": "screen_animation_reset",
+              "texture": "('.NeoSyreX/Textures/Icon/Container/Icon/' + $ContainerName)"
+             }
+            },
+            {
+             "p@lib.pl": {
+              "size": [
+               3,
+               0
+              ]
+             }
+            },
+            {
+             "t@lib.lb": {
+              "text": "$ContainerName",
+              "font_type": "$NeoSyreX_Global_FontType"
+             }
+            }
+           ]
+          }
+         },
+         {
+          "Chest@NeoSyreX-Common|Container.Container_Item_93": {
+           "anchor_from": "top_middle",
+           "anchor_to": "top_middle",
+           "offset": [
+            0.0,
+            "5.78%"
+           ],
+           "$item_collection_name|default": "container_items"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "Bloom@lib.im": {
+        "texture": "$XSShadow",
+        "alpha": "$NeoSyreX_Basic_Shadow_Texture_Alpha",
+        "color": "$NeoSyreX_Basic_Shadow_Texture_Color",
+        "ignored": "(not $NeoSyreX_Textures_Shadow)",
+        "layer": -2,
+        "size": [
+         "100% + 49.0px",
+         "100% + 47.89px"
+        ]
+       }
+      },
+      {
+       "Border@lib.im": {
+        "color": "$NeoSyreX_Basic_Border_Texture_Top_Color",
+        "layer": 5,
+        "size": [
+         "100.0%",
+         "100.0%"
+        ],
+        "texture": "$texture",
+        "variables": [
+         {
+          "requires": "($NeoSyreX_Fillet_Texture_Degree = 10)",
+          "$texture|default": "$Border10"
+         },
+         {
+          "requires": "($NeoSyreX_Fillet_Texture_Degree = 15)",
+          "$texture|default": "$Border15"
+         },
+         {
+          "requires": "($NeoSyreX_Fillet_Texture_Degree = 20)",
+          "$texture|default": "$Border20"
+         }
+        ]
+       }
+      },
+      {
+       "💀💀💀@NeoSyreX-Common|Container.💀💀💀": {}
+      },
+      {
+       "HotbarInventoryContent@NeoSyreX-Common|Container.HotbarInventoryContent": {}
+      },
+      {
+       "close@NeoSyreX-Common|Container.ContainerCloseButton": {}
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "LargeChestContent@lib.pl": {
+  "size": [
+   "100.0%",
+   "100.0%"
+  ],
+  "controls": [
+   {
+    "container_base@NeoSyreX-Common|Container.ContainerBase": {}
+   },
+   {
+    "ChestPanel@lib.im": {
+     "size": "$size",
+     "$size": [
+      "176.0px",
+      "220.0px"
+     ],
+     "anims": [
+      "@NeoSyreX-Animations|Container.Container_Anim_Size_Exit",
+      "@NeoSyreX-Animations|Container.Container_Anim_Size_Enter"
+     ],
+     "animation_reset_name": "screen_animation_reset",
+     "color": "$NeoSyreX_Basic_Border_Texture_Middle_Color",
+     "alpha": "$NeoSyreX_Basic_Border_Texture_Middle_Alpha",
+     "texture": "$texture",
+     "variables": [
+      {
+       "requires": "($NeoSyreX_Fillet_Texture_Degree = 10)",
+       "$texture|default": "$Fillet10"
+      },
+      {
+       "requires": "($NeoSyreX_Fillet_Texture_Degree = 15)",
+       "$texture|default": "$Fillet15"
+      },
+      {
+       "requires": "($NeoSyreX_Fillet_Texture_Degree = 20)",
+       "$texture|default": "$Fillet20"
+      }
+     ],
+     "controls": [
+      {
+       "TopHalf@lib.pl": {
+        "offset": [
+         0.0,
+         "4.5%"
+        ],
+        "size": [
+         "100.0% - 14.0px",
+         "100.0%"
+        ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "controls": [
+         {
+          "Icon@lib.sp_h": {
+           "size": [
+            24,
+            12
+           ],
+           "anchor_from": "top_left",
+           "anchor_to": "top_left",
+           "offset": [
+            0.0,
+            -4
+           ],
+           "controls": [
+            {
+             "Icon@lib.im": {
+              "size": "$size",
+              "$size": [
+               24,
+               12
+              ],
+              "anims": [
+               "@NeoSyreX-Animations|Container.Container_Anim_Size_Exit",
+               "@NeoSyreX-Animations|Container.Container_Anim_Size_Enter"
+              ],
+              "animation_reset_name": "screen_animation_reset",
+              "texture": "('.NeoSyreX/Textures/Icon/Container/Icon/' + $ContainerName)"
+             }
+            },
+            {
+             "p@lib.pl": {
+              "size": [
+               3,
+               0
+              ]
+             }
+            },
+            {
+             "t@lib.lb": {
+              "text": "$ContainerName",
+              "font_type": "$NeoSyreX_Global_FontType"
+             }
+            }
+           ]
+          }
+         },
+         {
+          "Chest@NeoSyreX-Common|Container.Container_Item_96": {
+           "anchor_from": "top_middle",
+           "anchor_to": "top_middle",
+           "offset": [
+            0.0,
+            "5.78%"
+           ],
+           "$item_collection_name|default": "container_items"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "Bloom@lib.im": {
+        "texture": "$XSShadow",
+        "alpha": "$NeoSyreX_Basic_Shadow_Texture_Alpha",
+        "color": "$NeoSyreX_Basic_Shadow_Texture_Color",
+        "ignored": "(not $NeoSyreX_Textures_Shadow)",
+        "layer": -2,
+        "size": [
+         "100% + 49.0px",
+         "100% + 47.89px"
+        ]
+       }
+      },
+      {
+       "Border@lib.im": {
+        "color": "$NeoSyreX_Basic_Border_Texture_Top_Color",
+        "layer": 5,
+        "size": [
+         "100.0%",
+         "100.0%"
+        ],
+        "texture": "$texture",
+        "variables": [
+         {
+          "requires": "($NeoSyreX_Fillet_Texture_Degree = 10)",
+          "$texture|default": "$Border10"
+         },
+         {
+          "requires": "($NeoSyreX_Fillet_Texture_Degree = 15)",
+          "$texture|default": "$Border15"
+         },
+         {
+          "requires": "($NeoSyreX_Fillet_Texture_Degree = 20)",
+          "$texture|default": "$Border20"
+         }
+        ]
+       }
+      },
+      {
+       "💀💀💀@NeoSyreX-Common|Container.💀💀💀": {}
+      },
+      {
+       "HotbarInventoryContent@NeoSyreX-Common|Container.HotbarInventoryContent": {}
+      },
+      {
+       "close@NeoSyreX-Common|Container.ContainerCloseButton": {}
+      }
+     ]
+    }
+   }
+  ]
+ }
+}
