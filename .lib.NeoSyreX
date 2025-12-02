@@ -1,0 +1,20 @@
+{
+ "namespace": "lib",
+ "pl": {"type": "panel"},
+ "im": {"type": "image"},
+ "ip": {"type": "input_panel"},
+ "sp_v": {"type": "stack_panel"},
+ "sp_h": {"type": "stack_panel","orientation": "horizontal"},
+ "sp": {"type": "stack_panel"},
+ "cp": {"type": "collection_panel"},
+ "lb": {"type": "label"},
+ "g": {"type": "grid"},
+ "cu": {"type": "custom"},
+ "bt": {"type": "button"},
+ "fa": {"type": "factory"},
+ "Zr": {"$ZhangRong|default":true}
+}
+
+//NeoSyreX-Modern-UI
+//Support-Library
+//Dev-苏羽悠夏
